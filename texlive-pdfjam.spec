@@ -1,3 +1,9 @@
+# revision 20459
+# category Package
+# catalog-ctan /support/pdfjam
+# catalog-date 2010-04-16 12:45:24 +0200
+# catalog-license gpl2
+# catalog-version 2.02
 Name:		texlive-pdfjam
 Version:	2.02
 Release:	1
@@ -95,6 +101,7 @@ and so on.
 %doc %{_texmfdir}/doc/man/man1/pdfnup.man1.pdf
 %doc %{_mandir}/man1/pdfpun.1*
 %doc %{_texmfdir}/doc/man/man1/pdfpun.man1.pdf
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -122,3 +129,5 @@ mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
 mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
