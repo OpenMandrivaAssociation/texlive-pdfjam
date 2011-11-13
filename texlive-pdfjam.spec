@@ -6,7 +6,7 @@
 # catalog-version 2.02
 Name:		texlive-pdfjam
 Version:	2.02
-Release:	1
+Release:	2
 Summary:	Shell scripts interfacing to pdfpages
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/pdfjam
@@ -18,9 +18,7 @@ BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
 Provides:	texlive-pdfjam.bin = %{EVRD}
-Provides:	pdfjam = %{version}
-Obsoletes:	pdfjam <= 1.21
-Conflicts:	pdfjam <= 1.21
+%rename pdfjam
 Conflicts:	texlive-texmf <= 20110705-3
 Conflicts:	texlive-doc <= 20110705-3
 
