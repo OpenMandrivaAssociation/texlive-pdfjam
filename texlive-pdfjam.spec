@@ -1,12 +1,12 @@
-# revision 20459
+# revision 29752
 # category Package
 # catalog-ctan /support/pdfjam
-# catalog-date 2010-04-16 12:45:24 +0200
+# catalog-date 2012-06-17 01:47:14 +0200
 # catalog-license gpl2
 # catalog-version 2.02
 Name:		texlive-pdfjam
 Version:	2.02
-Release:	3
+Release:	4
 Summary:	Shell scripts interfacing to pdfpages
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/pdfjam
@@ -60,36 +60,36 @@ and so on.
 %{_texmfdistdir}/scripts/pdfjam/pdfjoin
 %{_texmfdistdir}/scripts/pdfjam/pdfnup
 %{_texmfdistdir}/scripts/pdfjam/pdfpun
+%doc %{_mandir}/man1/pdf180.1*
+%doc %{_texmfdistdir}/doc/man/man1/pdf180.man1.pdf
+%doc %{_mandir}/man1/pdf270.1*
+%doc %{_texmfdistdir}/doc/man/man1/pdf270.man1.pdf
+%doc %{_mandir}/man1/pdf90.1*
+%doc %{_texmfdistdir}/doc/man/man1/pdf90.man1.pdf
+%doc %{_mandir}/man1/pdfbook.1*
+%doc %{_texmfdistdir}/doc/man/man1/pdfbook.man1.pdf
+%doc %{_mandir}/man1/pdfflip.1*
+%doc %{_texmfdistdir}/doc/man/man1/pdfflip.man1.pdf
+%doc %{_mandir}/man1/pdfjam-pocketmod.1*
+%doc %{_texmfdistdir}/doc/man/man1/pdfjam-pocketmod.man1.pdf
+%doc %{_mandir}/man1/pdfjam-slides3up.1*
+%doc %{_texmfdistdir}/doc/man/man1/pdfjam-slides3up.man1.pdf
+%doc %{_mandir}/man1/pdfjam-slides6up.1*
+%doc %{_texmfdistdir}/doc/man/man1/pdfjam-slides6up.man1.pdf
+%doc %{_mandir}/man1/pdfjam.1*
+%doc %{_texmfdistdir}/doc/man/man1/pdfjam.man1.pdf
+%doc %{_mandir}/man1/pdfjoin.1*
+%doc %{_texmfdistdir}/doc/man/man1/pdfjoin.man1.pdf
+%doc %{_mandir}/man1/pdfnup.1*
+%doc %{_texmfdistdir}/doc/man/man1/pdfnup.man1.pdf
+%doc %{_mandir}/man1/pdfpun.1*
+%doc %{_texmfdistdir}/doc/man/man1/pdfpun.man1.pdf
 %doc %{_texmfdistdir}/doc/support/pdfjam/COPYING
 %doc %{_texmfdistdir}/doc/support/pdfjam/PDFjam-README.html
 %doc %{_texmfdistdir}/doc/support/pdfjam/VERSION
 %doc %{_texmfdistdir}/doc/support/pdfjam/pdfdroplets.png
 %doc %{_texmfdistdir}/doc/support/pdfjam/pdfjam.conf
 %doc %{_texmfdistdir}/doc/support/pdfjam/tests.zip
-%doc %{_mandir}/man1/pdf180.1*
-%doc %{_texmfdir}/doc/man/man1/pdf180.man1.pdf
-%doc %{_mandir}/man1/pdf270.1*
-%doc %{_texmfdir}/doc/man/man1/pdf270.man1.pdf
-%doc %{_mandir}/man1/pdf90.1*
-%doc %{_texmfdir}/doc/man/man1/pdf90.man1.pdf
-%doc %{_mandir}/man1/pdfbook.1*
-%doc %{_texmfdir}/doc/man/man1/pdfbook.man1.pdf
-%doc %{_mandir}/man1/pdfflip.1*
-%doc %{_texmfdir}/doc/man/man1/pdfflip.man1.pdf
-%doc %{_mandir}/man1/pdfjam-pocketmod.1*
-%doc %{_texmfdir}/doc/man/man1/pdfjam-pocketmod.man1.pdf
-%doc %{_mandir}/man1/pdfjam-slides3up.1*
-%doc %{_texmfdir}/doc/man/man1/pdfjam-slides3up.man1.pdf
-%doc %{_mandir}/man1/pdfjam-slides6up.1*
-%doc %{_texmfdir}/doc/man/man1/pdfjam-slides6up.man1.pdf
-%doc %{_mandir}/man1/pdfjam.1*
-%doc %{_texmfdir}/doc/man/man1/pdfjam.man1.pdf
-%doc %{_mandir}/man1/pdfjoin.1*
-%doc %{_texmfdir}/doc/man/man1/pdfjoin.man1.pdf
-%doc %{_mandir}/man1/pdfnup.1*
-%doc %{_texmfdir}/doc/man/man1/pdfnup.man1.pdf
-%doc %{_mandir}/man1/pdfpun.1*
-%doc %{_texmfdir}/doc/man/man1/pdfpun.man1.pdf
 
 #-----------------------------------------------------------------------
 %prep
@@ -114,24 +114,6 @@ pushd %{buildroot}%{_bindir}
     ln -sf %{_texmfdistdir}/scripts/pdfjam/pdfpun pdfpun
 popd
 mkdir -p %{buildroot}%{_datadir}
-cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
+cp -fpar texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
-mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.02-3
-+ Revision: 754761
-- Rebuild to reduce used resources
-
-* Sun Nov 13 2011 Paulo Andrade <pcpa@mandriva.com.br> 2.02-2
-+ Revision: 730327
-- Use rename macro instead of mix of provides/conflicts/obsoletes
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 2.02-1
-+ Revision: 719219
-- texlive-pdfjam
-- texlive-pdfjam
-- texlive-pdfjam
-- texlive-pdfjam
-
+mv %{buildroot}%{_texmfdistdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
