@@ -6,7 +6,7 @@
 # catalog-version 2.02
 Name:		texlive-pdfjam
 Version:	2.02
-Release:	9
+Release:	10
 Summary:	Shell scripts interfacing to pdfpages
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/pdfjam
