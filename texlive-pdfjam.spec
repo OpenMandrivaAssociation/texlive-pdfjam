@@ -1,6 +1,6 @@
 Name:		texlive-pdfjam
 Version:	56991
-Release:	1
+Release:	2
 Summary:	Shell scripts interfacing to pdfpages
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/pdfjam
