@@ -1,5 +1,5 @@
 Name:		texlive-pdfjam
-Version:	67088
+Version:	67566
 Release:	1
 Summary:	Shell scripts interfacing to pdfpages
 Group:		Publishing
