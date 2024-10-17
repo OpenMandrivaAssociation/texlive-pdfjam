@@ -3,7 +3,7 @@ Version:	71641
 Release:	1
 Summary:	Shell scripts interfacing to pdfpages
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/support/pdfjam
+URL:		https://www.ctan.org/tex-archive/support/pdfjam
 License:	GPL2
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pdfjam.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pdfjam.doc.r%{version}.tar.xz
